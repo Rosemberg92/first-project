@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hotel Valhalla, reserva ahora y comienza tus vacaciones soñadas"> 
+<script type="text/javascript" src="js.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <title>Holel Valhalla</title>
+</head>
+
+<body>
+  <!--HEADER-->
+  <header class="container-fluid bg-warning d-flex justify-content-center" id="inicio_">
+    <p class="mb-0 p-1 fs-6 fw-bold">Reserva ahora y comienza tus vacaciones soñadas</p>
+  </header>
+
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"> <img src="img/logo.png" alt="logo" width="50"> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ms-auto mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#inicio_">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#intro">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#formReserva">Reserva</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--CAROUSEL-->
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/img1.jpg" class="car1 d-block w-100" alt="car1">
+      </div>
+      <div class="carousel-item">
+        <img src="img/img2.jpg" class="car1 d-block w-100" alt="car2">
+      </div>
+      <div class="carousel-item">
+        <img src="img/img3.jpg" class="car1 d-block w-100" alt="car3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!--DESCRIPCIÓN-->
+  <section class="w-50 mx-auto text-center pt-5 border-bottom border-3" id="intro">
+    <h1 class="fs-3 p-3 border-top border-3">Vive una experiencia única en un entorno <span
+        class="text-succsess fs-3">Natural</span>.</h1>
+    <p class="fs-5"><span id="brand">Hotel Valhalla</span> es el lugar indicado para desconectarte y disfrutar de unas
+      vacaciones soñadas.
+      Adéntrate en las profundidades de las soleadas montañas del norte y conoce un lugar mágico donde el lujo
+      y lo natural coexisten plenamente. </p>
+  </section>
+  <section class="w-50 mx-auto text-center pt-5 border-bottom border-3" id="intro">
+    <h1 class="fs-3 p-3 border-top border-3" id="precios">PRECIOS</h1>
+    <p class="fs-5"> Habitación = $50.000/día <br>
+    Adicionales = $50.000/día </p>
+    <p>(Desayuno, traslados y SPA)</p>
+  </section>
+
+  <!--RESERVA-->
+  <section id="formReserva" class="border-bottom border-secondary">
+     <div class="container pt-5" id="contenedor-formulario">
+      <div class="text-center mb-3">
+        <h2 id="titulo_formulario"> Formulario de Reserva</h2>
+        <p class="fs-4">¡No esperes más y reserva ahora!</p>
+        <p class="fs-6">Completa el formulario, indica si quieres incluir los servicios adicionales, confirma tus datos y luego reserva!</p>
+      </div>
+        <form class="row g-3" name="reserva">
+          <div class="col-md-6">
+            <label for="NombreCompleto" class="form-label" >Nombre completo</label>
+            <input type="text" class="form-control" maxlength="50" id="inputNOMBRE" placeholder="Ingrese su nombre" onblur="nombre_mayusculas();" autofocus required>
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="inputAddress" maxlength="100"
+              placeholder="Calle falsa 123" onblur="direccion_mayusculas();" required>
+          </div>
+          <div class="col-md-6">
+            <label for="inputRUT" class="form-label">RUT</label>
+            <input type="text" class="form-control" id="inputRUT" maxlength="12" placeholder="Sin puntos ni guión"required>
+          </div>
+          <div class="col-12">
+            <label for="inputPhone" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="inputPhone" maxlength="15" placeholder="Ingrese su teléfono">
+          </div>
+          <div class="col-md-6">
+            <label for="inputEdad" class="form-label">Edad</label>
+            <input type="number" class="form-control" id="inputEdad" placeholder="Ingrese su edad">
+          </div>
+          <div class="col-md-6">
+            <label for="sexo" class="form-label">Sexo</label>
+            <input type="text" class="form-control" id="sexo" maxlength="10" placeholder="Femenino, Masculino o Indefinido" onkeyup="sexFunction()" required>
+          </div>
+          <div class="col-md-4">
+            <label for="inputHabitacion" class="form-label" id="habitaciones">Número de Habitaciones</label>
+            <select class="form-select" aria-label="Default select example" id = "hab" required>
+              <option value="50000" label="1 Habitación" selected>1 Habitación</option>
+              <option value="100000">2 Habitaciones</option>
+              <option value="150000">3 Habitaciones</option>
+              <option value="200000">4 Habitaciones</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="checkIn" class="form-label">Check in</label>
+            <input type="date" class="form-control" id="checkIn" required>
+          </div>
+          <div class="col-md-2">
+            <label for="checkOut" class="form-label">Check Out</label>
+            <input type="date" class="form-control" id="checkOut"  required>
+          </div>
+          <div class="col-md-2">
+            <label for="dias" class="form-label" hidden>Días totales</label>
+            <p id="dias" ></p>
+          </div>
+          <tr>
+            <div class="pb-3 pt-1">
+              <input type="radio" id="adicionales" name="adicionales" >
+            <label> Adicionales</label>
+          </div>
+        </tr>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" onclick="costoTotal()" id="flexCheckDefault" required>
+          <label class="form-check-label" for="flexCheckDefault">
+            Favor revisa tus datos y confirma para reservar
+          </label>
+        </div>
+        <div class="col-md-2">
+          <label for="days" class="form-label">VALOR TOTAL</label>
+          <p id="valorTOTAL"></p>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-warning fs-6" type="submit" value="submit" onclick="final()">Reservar</button>
+          <button class="btn btn-warning fs-6" type="reset" value="reset">Reset</button>
+        </div>
+        </form>
+    </div>
+  </section>
+<!--FOOTER-->
+<footer class="w-100 d-flex align-items justify-content-center flex-wrap" id="footer">
+    <p class="fs-6 px-2 pt-3">Hotel Valhalla. &copy; Todos los Derechos Reservados</p>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

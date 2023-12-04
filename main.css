@@ -1,0 +1,65 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-x:hidden;
+}
+
+#menu a {
+font-size: 18px;
+font-weight: bold;
+color:darkgoldenrod;
+}
+img.car1 {
+    height: 39rem;
+}
+#intro {
+    margin-bottom: 130px;
+}
+h1 {
+    color:black;
+}
+h1 span {
+    color:darkgreen;
+    font-weight: bolder;
+}
+p {
+    color:black;
+}
+p span {
+    color:darkgoldenrod;
+    font-family: Impact;
+
+}
+#formReserva {
+    background-color: darkgoldenrod;
+    position:relative;
+}
+#contenedor-formulario {
+    left:80%;
+    background: #ffffff;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    padding-top: 100px;
+}
+#titulo_formulario {
+    color:darkgoldenrod;
+    font-family: Impact;
+}
+#precios {
+    color: darkgoldenrod;
+    font-family: Impact;
+}
+#footer {
+    background-color: darkgoldenrod;
+    color:black;
+    font-weight: bold;
+}
+
+@media (max-width:768px) {
+    #intro {
+        width:90% !important;
+    }
+    #contenedor-formulario {
+        width:90% !important;
+    }
+}
+
